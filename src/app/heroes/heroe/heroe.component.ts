@@ -17,4 +17,12 @@ export class HeroeComponent{
     return this.nombre.toUpperCase();
   }
 
+  public cambiarNombre():void {
+    this.nombre = 'Spiderman';
+  }
+
+  public cambiarEdad():void {
+    this.edad = 30;
+  }
+
 }
