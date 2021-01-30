@@ -14,12 +14,38 @@
   <div class="col">
     <h3>Agregar</h3>
     <hr>
-    <form>
+    <form (ngSubmit)="agregar()">
       <input placeholder="Nombre" type="text">
 
       <input placeholder="Poder" type="number">
 
-      <button>Agregar</button>
+      <button type="submit">
+        Agregar
+      </button>
     </form>
   </div>
 </div>
+
+<!--
+  <div class="col">
+      <h3>Agregar</h3>
+      <hr>
+      <form (submit)="agregar($event)">
+        <input placeholder="Nombre" type="text">
+
+        <input placeholder="Poder" type="number">
+
+        <button type="submit">
+          Agregar
+        </button>
+      </form>
+    </div>
+
+    angular dispone de varios modulos cuando uno dispone a trabajar con formularios
+    para ello en el modulo de dbz se añadio en los imports el modulo de FormModule
+    y en ves de usar el submit vamos a usar el ngSubmit
+
+    con esto evitamos enviar el evento $event al main-page.component.ts y tener que
+    tratarlo en la funcion para que no recarge la pagina
+    -->
+
