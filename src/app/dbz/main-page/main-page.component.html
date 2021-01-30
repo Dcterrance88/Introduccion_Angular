@@ -13,11 +13,12 @@
 
   <div class="col">
     <h3>Agregar</h3>
+    <h3><small>{{nuevo.nombre}} - {{nuevo.poder}}</small></h3>
     <hr>
     <form (ngSubmit)="agregar()">
-      <input placeholder="Nombre" type="text">
+      <input placeholder="Nombre" type="text" name="nombre" [(ngModel)]="nuevo.nombre" >
 
-      <input placeholder="Poder" type="number">
+      <input placeholder="Poder" type="number" name="poder" [(ngModel)]="nuevo.poder">
 
       <button type="submit">
         Agregar
@@ -27,25 +28,23 @@
 </div>
 
 <!--
-  <div class="col">
-      <h3>Agregar</h3>
-      <hr>
-      <form (submit)="agregar($event)">
-        <input placeholder="Nombre" type="text">
 
-        <input placeholder="Poder" type="number">
+  cuando en el imput usamos [value] estamos diciendo a angular que vamos a usar alguna variable u objeto
+  de nuestra clase TS para enlazarlo en este caso usamos el objeto literal nuevo.nombre enviandolo de la forma
+  one way data binding osea que se envia, pero no se devulve el valor si se cambia dentro del input y se ejecuta
+  el boton llamando a la funcion.
 
-        <button type="submit">
-          Agregar
-        </button>
-      </form>
-    </div>
+  si el input un valor, significa que estamos pensando en que está emitiendo un evento seria con ()
+  asi que disparamos el evento input llamando a la funcion cambiarNombre($event) tendiendo en cuenta que
+  $event es cuando se nececita de dicho evento.app-main-page
 
-    angular dispone de varios modulos cuando uno dispone a trabajar con formularios
-    para ello en el modulo de dbz se añadio en los imports el modulo de FormModule
-    y en ves de usar el submit vamos a usar el ngSubmit
+  <input placeholder="Nombre" type="text" [value]="nuevo.nombre" (input)="cambiarNombre($event)">
 
-    con esto evitamos enviar el evento $event al main-page.component.ts y tener que
-    tratarlo en la funcion para que no recarge la pagina
-    -->
+  para reducir el codigo obteniendo el mismo resultado podemos usar el ngModel el cual debe estar acompañado del
+  atributo "name" asi que cuando el ngModel esta de la siguiente manera [(ngModel)] significa que quiere tanto
+  escuchar como emitir el evento y el valor del evento se quiere que caiga en la propiedad nuevo.nombre cambiando
+  el valor en tiempo real. todo esto se entiende como two way dada binding es decir tanto emite com recibe eventos o
+  propiedades
+-->
+
 
