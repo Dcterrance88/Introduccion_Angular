@@ -18,4 +18,18 @@ Este es un breve listado de los temas fundamentales:
 
 - ngIf y ngIf-else
 
-- Y más...
+- Profundizar un poco más en los módulos
+
+- FormsModule
+
+- ngModel
+
+- @Inputs
+
+- @outputs
+
+- Servicios
+
+- Métodos en servicios
+
+- Depuraciones
