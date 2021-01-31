@@ -9,33 +9,12 @@ import { DbzService } from '../services/dbz.service';
 })
 export class MainPageComponent{
 
-  constructor(private dbzService:DbzService){
-
-  }
-
-  public personajes: Personaje[] = [
-    {
-      nombre: 'Goku',
-      poder: 15000
-    },
-    {
-      nombre: 'Vegeta',
-      poder: 7500
-    }
-  ];
-
   public nuevo: Personaje = {
     nombre: 'Maestro Roshi',
     poder: 1000
-  }
+  };
 
-  public agregarNuevoPersonaje(personaje:Personaje):void {
-    // debugger;
-    this.personajes.push(personaje);
+  constructor(){
   }
 
 }
-/*
-en el constructor se acaba de hacer una injeccion de dependencias
-*/
-

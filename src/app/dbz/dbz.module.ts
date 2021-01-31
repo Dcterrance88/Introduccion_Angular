@@ -31,8 +31,3 @@ import { DbzService } from './services/dbz.service';
   ]
 })
 export class DbzModule { }
-
-/*
-  Los providers son los servicios los cuales sirven como Singleton, es decir
-  una unica instancia que se va a tener a lo largo de todo este modulo de Dbz
-*/
