@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.service';
 
 
 @Component({
@@ -7,6 +8,10 @@ import { Personaje } from '../interfaces/dbz.interface';
   templateUrl: './main-page.component.html'
 })
 export class MainPageComponent{
+
+  constructor(private dbzService:DbzService){
+
+  }
 
   public personajes: Personaje[] = [
     {
@@ -25,12 +30,12 @@ export class MainPageComponent{
   }
 
   public agregarNuevoPersonaje(personaje:Personaje):void {
+    // debugger;
     this.personajes.push(personaje);
   }
+
 }
 /*
-como se emite un evento de tipo personaje en la clase hijo este sera el parametro
-de la funcion agregarNuevoPersonaje y asi podra almacenar dicho objeto en el array de
-objetos literales
+en el constructor se acaba de hacer una injeccion de dependencias
 */
 
