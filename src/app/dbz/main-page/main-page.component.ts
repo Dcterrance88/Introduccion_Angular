@@ -23,5 +23,14 @@ export class MainPageComponent{
     nombre: 'Maestro Roshi',
     poder: 1000
   }
+
+  public agregarNuevoPersonaje(personaje:Personaje):void {
+    this.personajes.push(personaje);
+  }
 }
+/*
+como se emite un evento de tipo personaje en la clase hijo este sera el parametro
+de la funcion agregarNuevoPersonaje y asi podra almacenar dicho objeto en el array de
+objetos literales
+*/
 
