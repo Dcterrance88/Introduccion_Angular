@@ -20,19 +20,8 @@ export class MainPageComponent{
   ];
 
   public nuevo: Personaje = {
-    nombre: '',
-    poder: 0
-  }
-
-  public agregar():void {
-    if(this.nuevo.nombre.trim().length === 0){ return; }
-    console.log(this.nuevo);
-    this.personajes.push(this.nuevo);
-
-    this.nuevo = {
-      nombre:'',
-      poder:0
-    }
+    nombre: 'Maestro Roshi',
+    poder: 1000
   }
 }
 
